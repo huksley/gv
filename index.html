@@ -36,6 +36,8 @@
             -webkit-background-clip: text;
             filter: invert(1) hue-rotate(245deg);
             mix-blend-mode: difference;
+            padding: 0px;
+            margin: 0px;
         }
 
         a {
@@ -49,9 +51,10 @@
 </head>
 
 <body
-    style="display: flex; flex-direction: column; justify-content: center; height: 100vh;width: 100vw; align-items: center">
+    style="display: flex; flex-direction: column; justify-content: center; height: 100vh; width: 100vw; align-items: center">
     <div>
-        <h1 contenteditable="true">&lt;3 Good vibes only &lt;3</h1>
+        <!-- nowrap fixes odd bug in Safari -->
+        <h1 contenteditable="true" style="white-space: nowrap;">&lt;3 Good vibes only &lt;3</h1>
     </div>
 
     <p style="position: fixed; bottom: 0; width:100%; text-align: center"><a

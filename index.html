@@ -1,64 +1,167 @@
 <!DOCTYPE html>
-<html lang="en_GB">
+<html lang="en">
 
 <head>
-    <title>LiebeHeide test</title>
+    <title>Wedding Invitation</title>
     <style type="text/css">
         @font-face {
             font-family: "LiebeHeide";
             src: url("LiebeHeide-Regular.woff") format('woff');
         }
 
-        html,
-        body,
-        p,
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        div {
-            font-family: LiebeHeide;
-            background-color: black;
-            color: white;
-            font-size: 1.3em;
+        * {
+            box-sizing: border-box;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
         }
 
         body {
-            padding: 0px;
-            margin: 0px;
+            background-color: #1a1008;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: LiebeHeide, serif;
         }
 
-        h1 {
-            background-clip: text;
-            font-size: 3em;
-            -webkit-background-clip: text;
-            filter: invert(1) hue-rotate(245deg);
-            mix-blend-mode: difference;
-            padding: 0px;
-            margin: 0px;
+        .card {
+            background: linear-gradient(160deg, #2a1a08 0%, #1a1008 50%, #0f0a04 100%);
+            border: 1px solid #b8860b55;
+            border-radius: 4px;
+            padding: 60px 70px;
+            max-width: 600px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 0 60px #b8860b22, inset 0 0 60px #00000044;
         }
 
-        a {
-            text-decoration: none;
+        .card::before,
+        .card::after {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border: 1px solid #b8860b33;
+            border-radius: 2px;
+            pointer-events: none;
         }
 
-        a:hover {
-            text-decoration: dashed;
+        .card::after {
+            inset: 12px;
+            border-color: #b8860b1a;
+        }
+
+        .ornament {
+            color: #c9a84c;
+            font-size: 1.4em;
+            letter-spacing: 0.2em;
+            margin-bottom: 10px;
+            opacity: 0.7;
+        }
+
+        .we-are {
+            color: #c9a84c99;
+            font-size: 1.3em;
+            letter-spacing: 0.15em;
+            margin: 0 0 4px 0;
+        }
+
+        .getting-married {
+            color: #c9a84c;
+            font-size: 1.2em;
+            letter-spacing: 0.2em;
+            margin: 0 0 24px 0;
+            opacity: 0.75;
+        }
+
+        .names {
+            color: #f5e6c8;
+            font-size: 4em;
+            line-height: 1.1;
+            margin: 0 0 8px 0;
+            white-space: nowrap;
+            outline: none;
+            cursor: text;
+        }
+
+        .names:focus {
+            border-bottom: 1px dashed #c9a84c55;
+        }
+
+        .divider {
+            color: #c9a84c;
+            font-size: 1.2em;
+            margin: 18px 0;
+            opacity: 0.5;
+            letter-spacing: 0.4em;
+        }
+
+        .invite-text {
+            color: #d4c4a0;
+            font-size: 1.35em;
+            line-height: 1.7;
+            margin: 0 0 28px 0;
+        }
+
+        .detail-label {
+            color: #c9a84c;
+            font-size: 1em;
+            letter-spacing: 0.25em;
+            opacity: 0.65;
+            margin: 0 0 2px 0;
+        }
+
+        .detail-value {
+            color: #f0e0bc;
+            font-size: 1.3em;
+            margin: 0 0 18px 0;
+        }
+
+        .detail-value.location {
+            line-height: 1.6;
+        }
+
+        .footer-ornament {
+            color: #c9a84c;
+            font-size: 1.3em;
+            margin-top: 10px;
+            opacity: 0.4;
+            letter-spacing: 0.3em;
         }
     </style>
 </head>
 
-<body
-    style="display: flex; flex-direction: column; justify-content: center; height: 100vh; width: 100vw; align-items: center">
-    <div>
-        <!-- nowrap fixes odd bug in Safari -->
-        <h1 contenteditable="true" style="white-space: nowrap;">&lt;3 Good vibes only &lt;3</h1>
-    </div>
+<body>
+    <div class="card">
+        <div class="ornament">✦ ✦ ✦</div>
 
-    <p style="position: fixed; bottom: 0; width:100%; text-align: center"><a
-            href="https://liebefonts.com/fonts/liebeheide">Copyright - LiebeFonts</a></p>
+        <p class="we-are">We are getting married</p>
+
+        <h1 class="names" contenteditable="true" spellcheck="false">Ruslan + Alina</h1>
+
+        <div class="divider">— ✦ —</div>
+
+        <p class="invite-text">
+            Would you be interested in joining our ceremony?<br>
+            After that we will also go for drinks.
+        </p>
+
+        <p class="detail-label">Date &amp; Time</p>
+        <p class="detail-value">08.04.2026 &nbsp; 15:00 – 15:15</p>
+
+        <p class="detail-label">Location</p>
+        <p class="detail-value location">
+            Lintulahdenkuja 2 D<br>
+            Helsinki
+        </p>
+
+        <div class="footer-ornament">✦ ✦ ✦</div>
+    </div>
 </body>
 
 </html>

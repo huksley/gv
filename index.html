@@ -21,7 +21,7 @@
         }
 
         body {
-            background-color: #1a1008;
+            background-color: #f5f0e8;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -30,107 +30,145 @@
         }
 
         .card {
-            background: linear-gradient(160deg, #2a1a08 0%, #1a1008 50%, #0f0a04 100%);
-            border: 1px solid #b8860b55;
+            background: #fffdf8;
+            border: 1px solid #e8d5c0;
             border-radius: 4px;
             padding: 60px 70px;
             max-width: 600px;
             width: 90%;
             text-align: center;
             position: relative;
-            box-shadow: 0 0 60px #b8860b22, inset 0 0 60px #00000044;
+            box-shadow: 0 4px 40px #c9a88422;
         }
 
-        .card::before,
-        .card::after {
+        .card::before {
             content: '';
             position: absolute;
-            inset: 6px;
-            border: 1px solid #b8860b33;
+            inset: 8px;
+            border: 1px solid #e8d5c066;
             border-radius: 2px;
             pointer-events: none;
         }
 
-        .card::after {
-            inset: 12px;
-            border-color: #b8860b1a;
-        }
-
         .ornament {
-            color: #c9a84c;
-            font-size: 1.4em;
-            letter-spacing: 0.2em;
-            margin-bottom: 10px;
+            color: #d4a0b0;
+            font-size: 1.3em;
+            letter-spacing: 0.25em;
+            margin-bottom: 14px;
             opacity: 0.7;
         }
 
         .we-are {
-            color: #c9a84c99;
-            font-size: 1.3em;
-            letter-spacing: 0.15em;
+            color: #a89080;
+            font-size: 1.2em;
+            letter-spacing: 0.12em;
             margin: 0 0 4px 0;
         }
 
         .getting-married {
-            color: #c9a84c;
-            font-size: 1.2em;
-            letter-spacing: 0.2em;
-            margin: 0 0 24px 0;
-            opacity: 0.75;
+            color: #b09080;
+            font-size: 1.1em;
+            letter-spacing: 0.18em;
+            margin: 0 0 20px 0;
+            opacity: 0.8;
         }
 
         .names {
-            color: #f5e6c8;
+            color: #7a5c6e;
             font-size: 4em;
             line-height: 1.1;
-            margin: 0 0 8px 0;
+            margin: 0 0 4px 0;
             white-space: nowrap;
             outline: none;
             cursor: text;
+            border-bottom: 1px dashed #d4a0b066;
+            display: inline-block;
+            padding: 0 8px 4px;
+            min-width: 200px;
         }
 
         .names:focus {
-            border-bottom: 1px dashed #c9a84c55;
+            border-bottom-color: #d4a0b0;
+            background: #fdf5f8;
+            border-radius: 2px;
+        }
+
+        .edit-hint {
+            color: #c0a8b0;
+            font-size: 0.85em;
+            margin: 6px 0 0 0;
+            opacity: 0.7;
+            letter-spacing: 0.05em;
+        }
+
+        .dear-line {
+            color: #a89080;
+            font-size: 1.3em;
+            margin: 0 0 2px 0;
+        }
+
+        .guest-name {
+            color: #7a5c6e;
+            font-size: 2em;
+            outline: none;
+            cursor: text;
+            border-bottom: 1px dashed #d4a0b066;
+            display: inline-block;
+            padding: 0 8px 2px;
+            min-width: 120px;
+        }
+
+        .guest-name:focus {
+            border-bottom-color: #d4a0b0;
+            background: #fdf5f8;
+            border-radius: 2px;
+        }
+
+        .guest-edit-hint {
+            color: #c0a8b0;
+            font-size: 0.85em;
+            margin: 4px 0 0 0;
+            opacity: 0.7;
+            letter-spacing: 0.05em;
         }
 
         .divider {
-            color: #c9a84c;
-            font-size: 1.2em;
-            margin: 18px 0;
-            opacity: 0.5;
+            color: #d4a0b0;
+            font-size: 1.1em;
+            margin: 22px 0;
+            opacity: 0.6;
             letter-spacing: 0.4em;
         }
 
         .invite-text {
-            color: #d4c4a0;
-            font-size: 1.35em;
-            line-height: 1.7;
-            margin: 0 0 28px 0;
+            color: #7a6860;
+            font-size: 1.3em;
+            line-height: 1.8;
+            margin: 0 0 30px 0;
         }
 
         .detail-label {
-            color: #c9a84c;
-            font-size: 1em;
-            letter-spacing: 0.25em;
-            opacity: 0.65;
-            margin: 0 0 2px 0;
+            color: #c4a0a8;
+            font-size: 0.9em;
+            letter-spacing: 0.28em;
+            margin: 0 0 3px 0;
         }
 
         .detail-value {
-            color: #f0e0bc;
-            font-size: 1.3em;
-            margin: 0 0 18px 0;
+            color: #6a5048;
+            font-size: 1.25em;
+            margin: 0 0 20px 0;
         }
 
         .detail-value.location {
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .footer-ornament {
-            color: #c9a84c;
-            font-size: 1.3em;
-            margin-top: 10px;
-            opacity: 0.4;
+            color: #d4a0b0;
+            font-size: 1.2em;
+            margin-top: 12px;
+            opacity: 0.45;
             letter-spacing: 0.3em;
         }
     </style>
@@ -143,8 +181,15 @@
         <p class="we-are">We are getting married</p>
 
         <h1 class="names" contenteditable="true" spellcheck="false">Ruslan + Alina</h1>
+        <p class="edit-hint">click to edit names</p>
 
         <div class="divider">— ✦ —</div>
+
+        <p class="dear-line">Dear</p>
+        <span class="guest-name" contenteditable="true" spellcheck="false">Guest Name</span>
+        <p class="guest-edit-hint">click to edit guest name</p>
+
+        <br>
 
         <p class="invite-text">
             Would you be interested in joining our ceremony?<br>
